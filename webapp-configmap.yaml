@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: webapp-config
+data:
+  group: Group1
+  image_url: |
+    {  
+      "success_url": "s3://simple-webapp-mysql-images/success.jpg", 
+      "failed_url": "s3://simple-webapp-mysql-images/failed.png"
+    }
