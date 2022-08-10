@@ -16,32 +16,32 @@ spec:
     spec:
       serviceAccountName: clo835 #comment this if sa is not created
       containers:
-      - name: simple-webapp-mysql
-        image: 228064520835.dkr.ecr.us-east-1.amazonaws.com/simple-webapp-mysql:v1.3
-        ports:
-        - containerPort: 81
-        env:
-        - name: GROUP_NAME
-          valueFrom: 
-            configMapKeyRef:
-              name: webapp-config
-              key: group
-        volumeMounts:
-        - name: app-secret-volumes
-          mountPath: "/opt/app-secret-volumes"
-          readOnly: true
-        - name: config-volume
-          mountPath: /clo835/config
-        envFrom:
-          - secretRef:
-              name: app-secret
+        - name: simple-webapp-mysql
+          image: 228064520835.dkr.ecr.us-east-1.amazonaws.com/simple-webapp-mysql:v1.4
+          ports:
+            - containerPort: 81
+          env:
+            - name: GROUP_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: webapp-config
+                  key: group
+          volumeMounts:
+            - name: app-secret-volumes
+              mountPath: "/opt/app-secret-volumes"
+              readOnly: true
+            - name: config-volume
+              mountPath: /clo835/config
+          envFrom:
+            - secretRef:
+                name: app-secret
       volumes:
-      - name: app-secret-volumes
-        secret:
-          secretName: app-secret
-      - name: config-volume
-        configMap:
-          name: webapp-config
-          items:
-          - key: image_url
-            path: image_url
+        - name: app-secret-volumes
+          secret:
+            secretName: app-secret
+        - name: config-volume
+          configMap:
+            name: webapp-config
+            items:
+              - key: image_url
+                path: image_url
