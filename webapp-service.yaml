@@ -7,5 +7,5 @@ spec:
     name: simple-webapp-mysql
   type: LoadBalancer
   ports:
-  - port: 81
+  - port: 80
     targetPort: 81
