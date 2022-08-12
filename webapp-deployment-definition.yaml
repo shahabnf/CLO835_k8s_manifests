@@ -14,7 +14,7 @@ spec:
       labels:
         name: simple-webapp-mysql
     spec:
-      serviceAccountName: clo835 #comment this if sa is not created
+      serviceAccountName: clo835
       containers:
         - name: simple-webapp-mysql
           image: 228064520835.dkr.ecr.us-east-1.amazonaws.com/simple-webapp-mysql:v1.6
