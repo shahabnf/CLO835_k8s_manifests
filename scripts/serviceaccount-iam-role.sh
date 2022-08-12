@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Create an OIDC provider for the cluster
 eksctl utils associate-iam-oidc-provider --cluster=clo835 --approve
