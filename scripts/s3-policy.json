@@ -7,7 +7,7 @@
                 "s3:Get*",
                 "s3:List*"
             ],
-            "Resource": "arn:aws:s3:::simple-webapp-mysql-images/*"
+            "Resource": "arn:aws:s3:::simple-webapp-mysql-images-clo835/*"
         }
     ]
 }
