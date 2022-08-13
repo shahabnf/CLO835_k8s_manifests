@@ -3,7 +3,7 @@ echo "\n--------------------------------------"
 echo "*** Installing Simple Webapp MySQL ..."
 echo "--------------------------------------\n"
 
-kubectl create ns final
+kubectl apply -f ../create-namespace.yaml
 kubectl apply -f ../mysql-pvc.yaml -n final
 kubectl apply -f ../secret-data.yaml -n final
 kubectl apply -f ../mysql-deployment-definition.yaml -n final

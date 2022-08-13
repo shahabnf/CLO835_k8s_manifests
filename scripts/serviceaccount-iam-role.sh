@@ -34,5 +34,4 @@ OUT=$(aws iam create-role --role-name clo835-service-account-role --assume-role-
 echo $OUT
 rm trust.json
 #attach the s3 read only access policy to the role
-#aws iam attach-role-policy --role-name sa-iam-role --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
 aws iam put-role-policy --role-name clo835-service-account-role --policy-name SA-S3ReadAccess --policy-document file://s3-policy.json
