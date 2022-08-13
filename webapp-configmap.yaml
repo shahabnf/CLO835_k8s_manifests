@@ -9,8 +9,3 @@ data:
       "success_url": "s3://simple-webapp-mysql-images/success.jpg", 
       "failed_url": "s3://simple-webapp-mysql-images/failed.png"
     }
-  # New s3 location
-  #     {  
-  #   "success_url": "s3://simple-webapp-mysql-images-group1/success.jpg", 
-  #   "failed_url": "s3://simple-webapp-mysql-images-group1/failed.png"
-  # }
